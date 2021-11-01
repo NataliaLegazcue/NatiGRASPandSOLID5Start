@@ -4,7 +4,6 @@
 // </copyright>
 //-------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 
 namespace Full_GRASP_And_SOLID
@@ -61,18 +60,6 @@ namespace Full_GRASP_And_SOLID
             }
 
             return result;
-        }
-        public string GetTextToPrint()
-        {
-        string result = $"Fecha: {this.FinalProduct}\n";
-        
-        foreach (BaseStep item in this.steps)
-        {
-            result = result + item.GetTextToPrint();
-        }
-        result = result + $"Total: ${this.Total}";
-        
-        return result;
         }
     }
 }
